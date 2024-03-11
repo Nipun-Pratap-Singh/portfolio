@@ -60,9 +60,9 @@ p {
 .achievement {
     margin-bottom: 20px;
 }
-.contact {
-    /* text-align: center; */
-}
+/* .contact{
+    text-align: center;
+} */
 .contact a {
     color: #007bff;
     text-decoration: none;
