@@ -331,6 +331,11 @@ span{
     cursor: pointer;
 }
 
+.result-form{
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
 .footer{
     display: flex;
     justify-content: space-between;
