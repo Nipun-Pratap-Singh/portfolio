@@ -176,6 +176,18 @@ span{
     margin: 2rem 0 3rem;
 }
 
+.about-img, .about-content {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1.9s, transform 3.3s;
+}
+
+.about-img.slide-in, .about-content.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 .services h2{
     margin-bottom: 5rem;
 }
@@ -215,6 +227,18 @@ span{
     font-size:1.6rem;
     margin: 1rem 0 3rem;
 }
+
+.services-box {
+    opacity: 0;
+    transform: translateY(50px); /* Initially move down */
+    transition: opacity 3.5s ease, transform 3.5s ease; /* Adjust timing as needed */
+}
+
+.services-box.loaded {
+    opacity: 1;
+    transform: translateY(0); /* Move to its original position */
+}
+
 
 .portfolio{
     background: var(--second-bg-colour);
@@ -509,3 +533,4 @@ span{
         margin-top: 2rem;
     }
 }
+
