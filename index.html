@@ -173,7 +173,8 @@
    <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="https://api.web3forms.com/submit" method="POST">
+    <form method="POST" id="form">
+
         <input type="hidden" name="access_key" value="f8114d23-42f9-420a-968f-53252bdc882a">
         <div class="input-box">
             <input type="text" name="name" placeholder="Full name" required>
@@ -184,30 +185,35 @@
             <input type="text" name="subject" placeholder="Email Subject" required>
         </div>
         <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
-        <input type="submit" value="Send Message" class="btn">
-    </form>
+        <div class="h-captcha" data-captcha="true"></div>
     
-   </section>
+        <button class="btn" type="submit">Submit Form</button>
+    
+        <div id="result" class="result-form"></div>
+    
+    </form>
+</section>
 
 
-   <!-- footer design -->
+<!-- footer design -->
 
-   <footer class="footer">
+<footer class="footer">
     <div class="footer-text">
         <p>Copyright &copy; 2024 by Nipun Pratap Singh | All Rights Reserved.</p>
     </div>
-
+    
     <div class="footer-iconTop">
         <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
     </div>
-
-   </footer>
-
-
+    
+</footer>
 
 
 
-    <script src="js/script.js"></script>
+
+
+<script src="js/script.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 
