@@ -16,10 +16,6 @@
 
 <body>
 
-    
-
-
-
     <header class="header">
         <a href="#" class="logo">@Nipun Pratap Singh</a>
 
@@ -29,7 +25,7 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -74,32 +70,33 @@
 
     <!-- services section design -->
 
-    <section class="services" id="services">
-        <h2 class="heading">Our <span>Services</span></h2>
+<section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
 
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Data Analyst</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi reiciendis quod perferendis fugiat, inventore aliquam? Voluptatem, impedit?</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bx-cloud'></i>
-                <h3>Cloud Management</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi reiciendis quod perferendis fugiat, inventore aliquam? Voluptatem, impedit?</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bx-command'></i>
-                <h3>Linux Administrative</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi reiciendis quod perferendis fugiat, inventore aliquam? Voluptatem, impedit?</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-code-alt'></i>
+            <h3>Data Analyst</h3>
+            <p>Our Data Analyst service provides in-depth analysis of your business data, offering actionable insights to drive informed decision-making. Whether it's market trends, customer behavior, or operational efficiency, our experts harness the power of data to unlock valuable opportunities for your business.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
-    </section>
+
+        <div class="services-box">
+            <i class='bx bx-cloud'></i>
+            <h3>Cloud Management</h3>
+            <p>With our Cloud Management service, we ensure seamless integration, optimization, and security of your cloud infrastructure. From deployment to maintenance, our team handles every aspect, allowing you to focus on innovation and growth. Experience the scalability, flexibility, and reliability of cloud technology with our expert management solutions.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+        <div class="services-box">
+            <i class='bx bx-command'></i>
+            <h3>Linux Administrative</h3>
+            <p>Our Linux Administrative service offers comprehensive support for your Linux-based systems, ensuring smooth operations and optimal performance. From installation and configuration to troubleshooting and security, our certified professionals manage every aspect of your Linux environment, allowing you to maximize efficiency and productivity. Let us handle the complexities of Linux administration while you focus on your core business objectives.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+</section>
+
 
     <!-- portfolio section design -->
 
@@ -173,7 +170,8 @@
    <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="https://api.web3forms.com/submit" method="POST">
+    <form method="POST" id="form">
+
         <input type="hidden" name="access_key" value="f8114d23-42f9-420a-968f-53252bdc882a">
         <div class="input-box">
             <input type="text" name="name" placeholder="Full name" required>
@@ -184,30 +182,35 @@
             <input type="text" name="subject" placeholder="Email Subject" required>
         </div>
         <textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
-        <input type="submit" value="Send Message" class="btn">
-    </form>
+        <div class="h-captcha" data-captcha="true"></div>
     
-   </section>
+        <button class="btn" type="submit">Submit Form</button>
+    
+        <div id="result" class="result-form"></div>
+    
+    </form>
+</section>
 
 
-   <!-- footer design -->
+<!-- footer design -->
 
-   <footer class="footer">
+<footer class="footer">
     <div class="footer-text">
         <p>Copyright &copy; 2024 by Nipun Pratap Singh | All Rights Reserved.</p>
     </div>
-
+    
     <div class="footer-iconTop">
         <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
     </div>
-
-   </footer>
-
-
+    
+</footer>
 
 
 
-    <script src="js/script.js"></script>
+
+
+<script src="js/script.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 

@@ -49,3 +49,100 @@ navbar.classList.remove('active');
 
 };
 
+
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Form submitted successfully";
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+        // reseting the captcha to intial 
+        if (typeof hcaptcha !== 'undefined') {
+            hcaptcha.reset();
+        }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+        var aboutSection = document.getElementById("about");
+        var aboutImg = document.querySelector(".about-img");
+        var aboutContent = document.querySelector(".about-content");
+
+        var rect = aboutSection.getBoundingClientRect();
+        var elemTop = rect.top;
+        var elemBottom = rect.bottom;
+
+        // Partially visible or fully visible
+        var isVisible = (elemTop >= 0 && elemTop <= window.innerHeight) ||
+                        (elemBottom >= 0 && elemBottom <= window.innerHeight);
+
+        if (isVisible) {
+            aboutImg.classList.add("slide-in");
+            aboutContent.classList.add("slide-in");
+        } else {
+            aboutImg.classList.remove("slide-in");
+            aboutContent.classList.remove("slide-in");
+        }
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+        var servicesSection = document.getElementById("services");
+        var servicesBoxes = document.querySelectorAll(".services-box");
+
+        var rect = servicesSection.getBoundingClientRect();
+        var elemTop = rect.top;
+        var elemBottom = rect.bottom;
+
+        
+        var isVisible = (elemTop >= -100 && elemTop <= (window.innerHeight-450)) ||
+                        (elemBottom >= -100 && elemBottom <= (window.innerHeight)); // offset 450
+
+        if (isVisible) {
+            servicesBoxes.forEach(function(box, index) {
+                setTimeout(function() {
+                    box.classList.add("loaded");
+                }, index * 500); //  delay between each box
+            });
+        } else {
+            servicesBoxes.forEach(function(box) {
+                box.classList.remove("loaded");
+            });
+        }
+    });
+});
+
