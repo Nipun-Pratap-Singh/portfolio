@@ -95,16 +95,16 @@ form.addEventListener('submit', function(e) {
 
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", function() {
-        var aboutSection = document.getElementById("about");
-        var aboutImg = document.querySelector(".about-img");
-        var aboutContent = document.querySelector(".about-content");
+        let aboutSection = document.getElementById("about");
+        let aboutImg = document.querySelector(".about-img");
+        let aboutContent = document.querySelector(".about-content");
 
-        var rect = aboutSection.getBoundingClientRect();
-        var elemTop = rect.top;
-        var elemBottom = rect.bottom;
-
+        let rect = aboutSection.getBoundingClientRect();
+        let elemTop = rect.top;
+        let elemBottom = rect.bottom;
+        if (window.innerWidth >= 1024) {
         // Partially visible or fully visible
-        var isVisible = (elemTop >= 0 && elemTop <= window.innerHeight) ||
+        let isVisible = (elemTop >= 0 && elemTop <= window.innerHeight) ||
                         (elemBottom >= 0 && elemBottom <= window.innerHeight);
 
         if (isVisible) {
@@ -114,22 +114,26 @@ document.addEventListener("DOMContentLoaded", function() {
             aboutImg.classList.remove("slide-in");
             aboutContent.classList.remove("slide-in");
         }
+    }
+    else{
+        aboutImg.classList.remove("slide-in");
+        aboutContent.classList.remove("slide-in");
+    }
     });
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", function() {
-        var servicesSection = document.getElementById("services");
-        var servicesBoxes = document.querySelectorAll(".services-box");
+        let servicesSection = document.getElementById("services");
+        let servicesBoxes = document.querySelectorAll(".services-box");
 
-        var rect = servicesSection.getBoundingClientRect();
-        var elemTop = rect.top;
-        var elemBottom = rect.bottom;
+        let rect = servicesSection.getBoundingClientRect();
+        let elemTop = rect.top;
+        let elemBottom = rect.bottom;
 
         
-        var isVisible = (elemTop >= -100 && elemTop <= (window.innerHeight-450)) ||
+        let isVisible = (elemTop >= -100 && elemTop <= (window.innerHeight-450)) ||
                         (elemBottom >= -100 && elemBottom <= (window.innerHeight)); // offset 450
 
         if (isVisible) {
