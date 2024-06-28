@@ -4,92 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nipun Pratap Singh - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-    <header>
-        <!-- <div class="button"><button type="button" onclick="">Download CV</button></div> -->
-        <div class="button"><button><a href="/cv page/Nipun-CV123.pdf" target="_blank">Download CV</a></button></div>
-        <h1>Nipun Pratap Singh</h1>
-        <p>Email: nipunpratap86300@gmail.com.com | Phone: +91 9389499443</p>
-        
+    <header class="bg-white shadow">
+        <div class="container mx-auto p-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Nipun Pratap Singh</h1>
+            <a href="/cv page/Nipun-CV123.pdf" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Download CV</a>
+        </div>
+        <div class="container mx-auto p-6 flex justify-center items-center space-x-4">
+            <a href="https://www.linkedin.com/in/nipunpratapsingh" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a> |
+            <a href="https://github.com/nipunpratapsingh" target="_blank" class="text-gray-900 hover:underline">GitHub</a> |
+            <a href="mailto:nipunpratap86300@gmail.com" class="text-gray-900 hover:underline">nipunpratap86300@gmail.com</a> |
+            <span>+91 9389499443</span>
+        </div>
     </header>
 
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <hr>
-            <p>Enthusiastic and detail-oriented B.Tech Computer Science Engineering student at Gautam Buddha University with a keen interest in <span class="highlight">Python Developer</span>. Passionate about leveraging data to drive informed decision-making and solve complex problems.</p>
+    <div class="container mx-auto p-6">
+        <section id="summary" class="my-6">
+            <h2 class="text-2xl font-bold">Summary</h2>
+            <hr class="my-2">
+            <p class="text-lg">Detail-oriented Python Developer with expertise in Django for backend and advanced skills in HTML, CSS, Tailwind CSS, and JavaScript for frontend design. Proven ability to create dynamic, responsive, and user-friendly web solutions through seamless integration of frontend and backend technologies. Adept at prioritizing user experience and functionality in all projects.</p>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <hr>
-            <p><span class="highlight">Bachelor of Technology</span> in Computer Science Engineering<br>Gautam Buddha University (Expected Graduation: May 2025)</p>
+        <section id="education" class="my-6">
+            <h2 class="text-2xl font-bold">Education</h2>
+            <hr class="my-2">
+            <p class="text-lg"><span class="font-semibold">Bachelor of Technology</span> in Computer Science Engineering<br>Gautam Buddha University, Greater Noida, Uttar Pradesh, India (Aug. 2021 - May 2025)<br>CGPA: 8.52/10</p>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <hr>
-            <ul>
-                <li><span class="highlight">Python Developer:</span> Proficient in Python, SQL, and data visualization tools like Tableau.</li>
-                <li><span class="highlight">Programming Languages:</span> Java, C++, Python.</li>
-                <li><span class="highlight">Database Management:</span> MySQL, MongoDB.</li>
-                <li><span class="highlight">Machine Learning:</span> Familiar with concepts and algorithms.</li>
-                <li><span class="highlight">Problem-Solving:</span> Strong analytical skills with a problem-solving mindset.</li>
-                <li><span class="highlight">Communication:</span> Excellent verbal and written communication skills.</li>
+        <section id="skills" class="my-6">
+            <h2 class="text-2xl font-bold">Technical Skills</h2>
+            <hr class="my-2">
+            <ul class="list-disc list-inside text-lg">
+                <li><span class="font-semibold">Languages:</span> Python, C, C++, JavaScript</li>
+                <li><span class="font-semibold">Libraries/Frameworks:</span> Django, Pandas, Numpy, MySQL, Selenium, CSS, React, Tailwind CSS</li>
+                <li><span class="font-semibold">Miscellaneous:</span> HTML, CSS, React Query, Git, Redis-server, Python Scripting</li>
+                <li><span class="font-semibold">Coursework:</span> Object-Oriented Programming, Data Structure And Algorithms, Database Management, Computer Network</li>
             </ul>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <hr>
-            <div class="project">
-                <h3>Data science Project: Tatanic survival Prediction</h3>
-                <p>Developed a data science project to tatanic survival Prediction  using historical data. Achieved a 90% accuracy rate in predicting .</p>
-            </div>
-            <div class="project">
-                <h3>Database Management System: E-Commerce Platform</h3>
-                <p>Designed and implemented a database management system for an e-commerce platform. Ensured efficient data storage and retrieval.</p>
-            </div>
-            <div class="project">
-                <h3>Machine Learning Project: Sentiment Analysis</h3>
-                <p>Conducted sentiment analysis on customer reviews using Python and natural language processing techniques. Developed a model with 85% accuracy.</p>
+        <section id="profiles" class="my-6">
+            <h2 class="text-2xl font-bold">Coding / Social Media Profiles</h2>
+            <hr class="my-2">
+            <p class="text-lg">
+                <a href="https://www.hackerrank.com/nipunpratapsingh" target="_blank" class="text-blue-500 hover:underline">HackerRank</a> |
+                <a href="https://www.codechef.com/users/nipunpratapsingh" target="_blank" class="text-blue-500 hover:underline">CodeChef</a> |
+                <a href="https://leetcode.com/nipunpratapsingh" target="_blank" class="text-blue-500 hover:underline">LeetCode</a> |
+                <a href="https://github.com/nipunpratapsingh" target="_blank" class="text-blue-500 hover:underline">GitHub</a>
+            </p>
+        </section>
+
+        <section id="experience" class="my-6">
+            <h2 class="text-2xl font-bold">Experience</h2>
+            <hr class="my-2">
+            <div class="experience my-4">
+                <h3 class="text-xl font-semibold">Data Science Intern - CodSoft</h3>
+                <p class="text-lg">(Feb 2024 - March 2024)</p>
+                <ul class="list-disc list-inside text-lg">
+                    <li>Demonstrated proficiency in programming languages such as Python, R, or SQL for data manipulation and analysis.</li>
+                    <li>Conducted data analysis on Titanic Survival, Iris Flower, Movies Rating to derive actionable insights.</li>
+                    <li>Proficient in Python and SQL for data manipulation.</li>
+                    <li>Applied machine learning algorithms to analyze various factors such as age, gender, ticket class, fare, and cabin information.</li>
+                </ul>
             </div>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <hr>
-            <div class="experience">
-                <h3>Data Science - codsoft Corporation</h3>
-                <p>feb 2024 - March 2024</p>
-                <p>Analyzed large datasets to identify trends and patterns, providing valuable insights for decision-making. Assisted in the development of data-driven strategies to optimize business processes.</p>
+        <section id="projects" class="my-6">
+            <h2 class="text-2xl font-bold">Projects</h2>
+            <hr class="my-2">
+            <div class="project my-4">
+                <h3 class="text-xl font-semibold">Portfolio</h3>
+                <p class="text-lg"><a href="https://your-portfolio-link.com" target="_blank" class="text-blue-500 hover:underline">Link</a></p>
+                <ul class="list-disc list-inside text-lg">
+                    <li>Developed a dynamic and interactive online portfolio using HTML, CSS, and JavaScript available.</li>
+                    <li>Regularly updated the portfolio to reflect the latest projects and skills, maintaining a current and professional presentation.</li>
+                    <li>Showcased a collection of personal projects, demonstrating a strong command of front-end development skills.</li>
+                </ul>
+            </div>
+            <div class="project my-4">
+                <h3 class="text-xl font-semibold">Frontend – Real-Estate</h3>
+                <p class="text-lg"><a href="https://your-real-estate-link.com" target="_blank" class="text-blue-500 hover:underline">Link</a></p>
+                <ul class="list-disc list-inside text-lg">
+                    <li>Developed a responsive real estate website using HTML, CSS, JavaScript, and React.</li>
+                    <li>Integrated real-time data fetching through APIs for up-to-date property information.</li>
+                    <li>Managed code versioning and collaboration using Git, maintaining a clean and organized codebase.</li>
+                </ul>
+            </div>
+            <div class="project my-4">
+                <h3 class="text-xl font-semibold">Frontend – Weather-Site</h3>
+                <p class="text-lg"><a href="https://your-weather-site-link.com" target="_blank" class="text-blue-500 hover:underline">Link</a></p>
+                <ul class="list-disc list-inside text-lg">
+                    <li>Created a weather site using HTML, CSS, and React that provides real-time weather information by city.</li>
+                    <li>Developed an intuitive search bar with autocomplete suggestions to enhance user experience.</li>
+                    <li>Integrated with a reliable weather API to ensure accurate and up-to-date information.</li>
+                </ul>
+            </div>
+            <div class="project my-4">
+                <h3 class="text-xl font-semibold">Backend – E-commerce Website With Payment Integration</h3>
+                <p class="text-lg"><a href="https://your-ecommerce-link.com" target="_blank" class="text-blue-500 hover:underline">Link</a></p>
+                <ul class="list-disc list-inside text-lg">
+                    <li>Developed a full-featured e-commerce website using Python, Django, and React.</li>
+                    <li>Implemented secure backend APIs with Django for user authentication, product management, and order processing.</li>
+                    <li>Integrated payment gateways to enable secure transactions.</li>
+                </ul>
             </div>
         </section>
 
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <hr>
-            <div class="achievement">
-                <h3>Certification's list</h3>
-                <p>-Flipkart Grid 5.0 Tech Quiz of Flipkart GRID 5.0 - Software Development Challenge - 2023</p>
-                <p>-300+ questions solved on codechef</p>
-                <p>-100+ questions solved on DSA</p>
-            </div>
-            <div class="achievement">
-                <h3>Hackathon Winner</h3>
-                <p>Awarded first place in the university's annual hackathon competition for developing an innovative software solution.</p>
-            </div>
+        <section id="achievements" class="my-6">
+            <h2 class="text-2xl font-bold">Certification / Accomplishments</h2>
+            <hr class="my-2">
+            <ul class="list-disc list-inside text-lg">
+                <li>Flipkart Grid 5.0 Tech Quiz of Flipkart GRID 5.0 - Software Development Challenge – 2023</li>
+                <li>300+ questions solved on CodeChef</li>
+                <li>100+ questions solved on Data Structures and Algorithms</li>
+            </ul>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <hr>
-            <p>Feel free to reach out via <a href="mailto:nipunpratapsingh@example.com">email</a> or phone to discuss collaboration opportunities or to request further information.</p>
-        </section>
-    </div>
-
-</body>
-</html>
+        <section id="contact" class
